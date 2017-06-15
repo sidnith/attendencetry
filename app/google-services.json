@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "740695863849",
+    "firebase_url": "https://fir-54250.firebaseio.com",
+    "project_id": "fir-54250",
+    "storage_bucket": "fir-54250.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740695863849:android:a446aa242ac1abc0",
+        "android_client_info": {
+          "package_name": "com.sidharth.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740695863849-i0o5mtme89a1hl8jsgek9fr721nvba5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn_JpfldTldhCBnEE-6rloI9RKOh1bZvA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740695863849:android:09e2e0e80dceae1c",
+        "android_client_info": {
+          "package_name": "com.sidharth.attendancemeter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740695863849-vn1457ibu56olv0rdadur4rkt80i7ehs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sidharth.attendancemeter",
+            "certificate_hash": "0697e28d7ac5feb15bd33ea3478a2fb4b9403b4c"
+          }
+        },
+        {
+          "client_id": "740695863849-i0o5mtme89a1hl8jsgek9fr721nvba5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn_JpfldTldhCBnEE-6rloI9RKOh1bZvA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740695863849-i0o5mtme89a1hl8jsgek9fr721nvba5h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
