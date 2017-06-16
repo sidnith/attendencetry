@@ -47,7 +47,7 @@ public class Register extends Activity{
         String r=roll.getText().toString().trim();
         String d=dob.getText().toString().trim();
 
-        if(!TextUtils.isEmpty(n)&&!TextUtils.isEmpty(r)&&TextUtils.isEmpty(y)&&TextUtils.isEmpty(d)){
+        if(!TextUtils.isEmpty(n)&&!TextUtils.isEmpty(r)&&!TextUtils.isEmpty(y)&&!TextUtils.isEmpty(d)){
             Add add=new Add(n,y,r,d);
             databaseadd.child(r).setValue(add);
             Toast.makeText(getApplicationContext(),"Student Registered",Toast.LENGTH_SHORT).show();
