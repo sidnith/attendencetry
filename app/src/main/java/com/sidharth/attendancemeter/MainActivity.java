@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.sidharth.attendancemeter.TeacherAct.ClassAdd;
 
 import java.io.InputStream;
 
@@ -80,6 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
                                 if(dataSnapshot.exists()){
+                                    Intent i=new Intent(getApplicationContext(), ClassAdd.class);
+                                    startActivity(i);
                                     Toast.makeText(getApplicationContext(), "Yes", Toast.LENGTH_SHORT).show();
                                 }
                                 else{
