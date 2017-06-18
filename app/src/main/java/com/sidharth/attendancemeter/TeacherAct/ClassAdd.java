@@ -29,7 +29,7 @@ public class ClassAdd extends MainActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId()==R.id.add)
         {
-            Intent i=new Intent(getApplicationContext(), Register.class);
+            Intent i=new Intent(getApplicationContext(),listwindow.class);
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);

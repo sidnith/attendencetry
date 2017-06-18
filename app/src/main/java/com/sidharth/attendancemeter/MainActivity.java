@@ -1,5 +1,6 @@
 package com.sidharth.attendancemeter;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     EditText pass;
     EditText id;
     DatabaseReference ref;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         id=(EditText)findViewById(R.id.id);
         eye=(ImageView)findViewById(R.id.eye);
         eye.setOnTouchListener(this);
+        progressDialog=new ProgressDialog(this);
         ref= FirebaseDatabase.getInstance().getReference();
     }
 
@@ -68,6 +71,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     }
 
     public void onquery(View v) {
+        progressDialog.setMessage("Verifying User.....");
+        progressDialog.show();
+
         final String idm=id.getText().toString().trim();
         final String passw=pass.getText().toString().trim();
         if (v.getId() == R.id.teachlog) {
@@ -81,12 +87,16 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
                                 if(dataSnapshot.exists()){
+                                    finish();
                                     Intent i=new Intent(getApplicationContext(), ClassAdd.class);
                                     startActivity(i);
                                     Toast.makeText(getApplicationContext(), "Yes", Toast.LENGTH_SHORT).show();
                                 }
                                 else{
+                                   finish();
                                     Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
+
+
 
                                 }
 
@@ -104,6 +114,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
                     }
                 }
+
+
 
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
