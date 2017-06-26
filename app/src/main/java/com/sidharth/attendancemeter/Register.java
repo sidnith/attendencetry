@@ -1,6 +1,8 @@
 package com.sidharth.attendancemeter;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -22,6 +24,7 @@ public class Register extends Activity{
     EditText roll;
     EditText dob;
     Button reg;
+    ProgressDialog progressDialog;
     DatabaseReference databaseadd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +35,13 @@ public class Register extends Activity{
         roll=(EditText)findViewById(R.id.rollno);
         dob=(EditText)findViewById(R.id.dob);
         reg=(Button)findViewById(R.id.reg);
-
+        progressDialog=new ProgressDialog(this);
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 adddata();
+                progressDialog.setMessage("Registering User ....");
+                progressDialog.show();
             }
         });
     }
@@ -48,9 +53,14 @@ public class Register extends Activity{
         String d=dob.getText().toString().trim();
 
         if(!TextUtils.isEmpty(n)&&!TextUtils.isEmpty(r)&&!TextUtils.isEmpty(y)&&!TextUtils.isEmpty(d)){
+
             Add add=new Add(n,y,r,d);
             databaseadd.child(r).setValue(add);
+
             Toast.makeText(getApplicationContext(),"Student Registered",Toast.LENGTH_SHORT).show();
+            finish();
+            Intent i=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
 
         }else{
             Toast.makeText(getApplicationContext(),"Enter valid information",Toast.LENGTH_SHORT).show();

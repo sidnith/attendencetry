@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                     Toast.makeText(getApplicationContext(), "Yes", Toast.LENGTH_SHORT).show();
                                 }
                                 else{
-                                   finish();
+                                  progressDialog.dismiss();
                                     Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
 
 
@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     }
                     else
                     {
+                        progressDialog.dismiss();
                         Toast.makeText(getApplicationContext(), "No", Toast.LENGTH_SHORT).show();
                     }
                 }
