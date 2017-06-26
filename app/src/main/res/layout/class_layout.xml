@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="30dp"
+        android:text="Title: "
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tit"
+        android:layout_alignStart="@+id/tit"
+        android:layout_below="@+id/tit"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Year: "
+        />
+
+    <TextView
+        android:id="@+id/No"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No of student:"
+        android:textStyle="bold"
+        android:textSize="20dp"
+
+        android:layout_below="@+id/year"
+        android:layout_alignLeft="@+id/year"
+        android:layout_alignStart="@+id/year"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/year"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/No"
+        android:layout_toRightOf="@+id/No"
+        />
+
+    <TextView
+        android:id="@+id/y"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/No"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title"
+        />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/No"
+        android:layout_alignLeft="@+id/y"
+        android:layout_alignStart="@+id/y"
+        />
+
+
+</RelativeLayout>

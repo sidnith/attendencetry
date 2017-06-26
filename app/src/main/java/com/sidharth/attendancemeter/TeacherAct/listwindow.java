@@ -84,7 +84,11 @@ public class listwindow extends Activity {
             TeacherClassAdd addr=new TeacherClassAdd(y,sec,n,t);
             data.child(sec).child(t).setValue(addr);
             Toast.makeText(getApplicationContext(),"Class Added",Toast.LENGTH_SHORT).show();
-            Intent i=new Intent(getApplicationContext(),listwindow.class);
+            Intent i=new Intent(getApplicationContext(),ClassAdd.class);
+            i.putExtra("year",y);
+            i.putExtra("sec",sec);
+            i.putExtra("no",n);
+            i.putExtra("title",t);
             startActivity(i);
 
     }
@@ -94,7 +98,11 @@ public class listwindow extends Activity {
         TeacherClassAdd addr=new TeacherClassAdd(y,sec,n,t);
         data.child(t).setValue(addr);
         Toast.makeText(getApplicationContext(),"Class Added",Toast.LENGTH_SHORT).show();
-        Intent i=new Intent(getApplicationContext(),listwindow.class);
+        Intent i=new Intent(getApplicationContext(),ClassAdd.class);
+        i.putExtra("year",y);
+
+        i.putExtra("no",n);
+        i.putExtra("title",t);
         startActivity(i);
 
     }
